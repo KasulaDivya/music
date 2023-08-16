@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+     content="width=device-width, initial-scale=1.0">
+        <style>
+            /* Styling the body */
+            * {
+                padding: 0;
+                margin: 0;
+            }
+     
+            /* Styling the background image by
+            giving its url and position */
+            .container {
+                height: 100vh;
+                width: 100%;
+                background-image:url('music.jpg');
+                background-size: cover;
+                background-position:center;
+                position: relative;}
+                .nav li {
+            float: right;
+            list-style: none;
+        }
+        .nav a {
+            list-style: none;
+            height: 5px;
+            line-height: 60px;
+            font-size: 2rem;
+            font-weight: 550;
+            display: block;
+            padding: 5px 35px;
+            color: black;
+            text-decoration: none;
+        }
+        .content{
+            width:100%;
+            position:absolute;
+            margin-top:2%;
+            margin-right:10%;
+            display:flex;
+            align-items: center;
+            
+
+        }
+        .left-col {
+            margin-left: 5%;
+        }
+        .left-col h1{
+            font-size:50px;
+            color:crimson;
+            margin-bottom: 600px;
+            margin-right:700px ;
+        }
+        .right-col{
+            margin-top:400px;
+            float:left;
+        }
+        .right-col p {
+            font-size: 30px;
+            color: black;
+            font-weight: 650;
+            margin-right: 5px;
+            margin-bottom: 200px;
+        }
+        #icon {
+            cursor: pointer;
+            width:100px;
+            float: left;
+            margin-right:10%;
+            margin-left: 200px;
+            margin-top:-200px ;
+            margin-left:400px;
+
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <ul class="nav">
+                <li id="a1"><a href="#" >About</a></li>
+                <li><a href="#">contacts</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        <div class="content">
+        <div class="left-col">
+            <h1>My <br>Sounds </h1></div>
+            <div class="right-col" >
+                <p>Click here to listen</p>
+                <img src="playbtn.jpg" id="icon">
+            </div>
+        </div>
+        </div>
+        
+        <audio id="mysound">
+            <source src="Aradhya Song.mp3" type="audio/mp3">
+        </audio>
+        <script>
+            let home = document.getElementById("a1");
+            let mysound = document.getElementById("mysound");
+            let icon = document.getElementById("icon");
+     
+            // Creating a function that will change
+            // pause to play and vice-versa
+            icon.onclick = function () {
+                if (mysound.paused) {
+     
+                    // If paused then play the
+                    // music and change the image
+                    mysound.play();
+                    icon.src =
+    "pause.jpeg";
+                } else {
+     
+                    // If playing then pause the
+                    // music and change the image
+                    mysound.pause();
+                    icon.src =
+    "playbtn.jpg";
+                }
+            home.onclick = function(){
+                if(1===1){
+                    console.log(4+5);
+                }
+            }   
+            }
+        </script>
+    </body>
+</html>
